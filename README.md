@@ -16,12 +16,14 @@ son Liam (13), and her fun-loving daughter Maisie (6).
 
 ## Running
 
+Requires [uv](https://docs.astral.sh/uv/) (it installs Python 3.14 for you).
+
 ```bash
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-python main.py
+uv sync --locked
+uv run python main.py
 ```
+
+Check dependencies for known CVEs with `./scripts/audit.sh`.
 
 Press **Q** to quit, **arrow keys** to move, **Z** to interact, **X** to open inventory.
 

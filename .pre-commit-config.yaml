@@ -1,0 +1,9 @@
+repos:
+-   repo: local
+    hooks:
+    -   id: pip-audit
+        name: pip-audit (locked deps)
+        entry: scripts/audit.sh
+        language: system
+        files: ^(pyproject\.toml|uv\.lock|scripts/audit\.sh)$
+        pass_filenames: false

@@ -31,3 +31,7 @@ Press **Q** to quit, **arrow keys** to move, **Z** to interact, **X** to open in
 
 - Engine: [Pyxel](https://github.com/kitao/pyxel) by Takashi Kitao
 - Inspiration: [Dungeon Crawler Carl](https://www.dungeoncrawlercarl.com/) by Matt Dinniman
+
+## CI
+
+Jenkins builds this repo (root `Jenkinsfile`, shared `pythonPipeline` on a glibc uv image because pyxel has no musl wheels): locked `uv sync`, pytest with coverage, pip-audit, gitleaks. GitHub Actions are disabled. Locally: `uv sync --locked && uv run pytest --cov`.

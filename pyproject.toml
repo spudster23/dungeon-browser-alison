@@ -8,5 +8,12 @@ dependencies = [
     "pyxel>=2.0",
 ]
 
+[dependency-groups]
+dev = ["pytest", "pytest-cov"]
+
 [tool.uv]
 package = false
+
+[tool.coverage.run]
+source = ["."]
+omit = ["tests/*", ".venv/*"]
